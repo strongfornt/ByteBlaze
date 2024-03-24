@@ -60,7 +60,7 @@ export default function Nav() {
           <ul
               tabIndex={0}
               className={`menu absolute top-11 -left-60  menu-sm    text-xl  dropdown-content border border-primary border-opacity-30 border-l-none
-               mt-3 z-[1] p-2 shadow-xl bg-base-100 rounded-r-xl w-52  ${menu && '-left-4 duration-300  '}`}
+               mt-3 z-[1] p-2 shadow-xl bg-base-100 rounded-r-xl w-52  ${menu && '-left-[16px] duration-300  '}`}
             >
                <NavLink
               to="/"
