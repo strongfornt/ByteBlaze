@@ -11,16 +11,18 @@ export default function SingleBlogsTabs({blog}) {
    
     saveBlog(blogs)
   }
-    const [tabIndex,setTabIndex] = useState(0)
+    const [tabIndex,setTabIndex] = useState( localStorage.getItem('tabIndex') || 0)
+  
+    const index = parseInt(tabIndex)
   return (
     <>
          {/* Tabs start from here ----------------*/}
          <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start  flex-nowrap  text-gray-100">
               <Link
                to=''
-               onClick={()=> setTabIndex(0)}
+               onClick={()=> setTabIndex(localStorage.setItem('tabIndex',0))}
                className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 
-               ${tabIndex === 0 ? 'border border-b-0':'border-b'} rounded-t-lg border-gray-400 text-gray-400 `}
+               ${index === 0 ? 'border border-b-0':'border-b'} rounded-t-lg border-gray-400 text-gray-400 `}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -38,9 +40,9 @@ export default function SingleBlogsTabs({blog}) {
               </Link>
               <Link
                to={`author`}
-               onClick={()=> setTabIndex(1)}
+               onClick={()=> setTabIndex(localStorage.setItem('tabIndex',1))}
                 className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 
-                ${tabIndex === 1 ? 'border border-b-0':'border-b'} rounded-t-lg border-gray-400 text-gray-400 `}
+                ${index === 1 ? 'border border-b-0':'border-b'} rounded-t-lg border-gray-400 text-gray-400 `}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

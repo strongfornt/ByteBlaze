@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import BlogCard from "../Components/BlogCard";
 
+
 export default function Blogs() {
   const blogs = useLoaderData();
 

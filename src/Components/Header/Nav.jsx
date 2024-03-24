@@ -20,7 +20,7 @@ export default function Nav() {
         
       
     }
-    console.log(theme);
+   
   return (
     <>
       <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
