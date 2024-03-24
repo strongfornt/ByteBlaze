@@ -28,7 +28,7 @@ export default function Nav() {
         {/* menu start -------------------------------- */}
         <div className="lg:hidden relative">
           <button>
-            <label className="btn btn-circle swap swap-rotate">
+            <label className="btn btn-circle swap swap-rotate bg-transparent border-none ">
               {/* this hidden checkbox controls the state */}
               <input type="checkbox"  onChange={() => setMenu(!menu )}  />
 
